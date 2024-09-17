@@ -62,14 +62,13 @@ const gameFlow = (function(){
     };
 
     const checkWin = () => {
-        const gameBoard = gameBoard.getBoard();
+        const board = gameBoard.getBoard();
         return gameBoard.getWinConditions().some(condition => {
             return board[condition[0]] !== "" &&
             board[condition[0]] === board[condition[1]]
             && board[condition[1]] === board[condition[2]];
         });
     };
-
     const checkDraw = () => {
         const board = gameBoard.getBoard();
         return gameBoard.getWinConditions().every(condition => {
@@ -98,6 +97,14 @@ const gameFlow = (function(){
 
     return {playRound};
 
-})()
+})();
+
+
+console.log("=== Testing gameBoard ===");
+console.log(gameBoard.getBoard());
+
+console.log("Place Marker Test (Player 1, X):");
+gameBoard.placeMarker(0, player1.getMarker());
+console.log(gameBoard.getBoard());
 
 
