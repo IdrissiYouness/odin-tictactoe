@@ -39,7 +39,9 @@ const gameBoard = (function(){
         for(let i = 0 ; i < board.length ; i++) {
             if(board[i] !== "") {
                 const playerMarkerIcon = document.createElement("img");
-                playerMarkerIcon.src = `assets/${board[i].toLowerCase()}-ic.svg`;
+                playerMarkerIcon.style.width = "128px"
+                playerMarkerIcon.style.height = "128px"
+                playerMarkerIcon.src = `assets/${board[i].toLowerCase()}-handy-ic.png`;
                 playerMarkerIcon.draggable = false;
                 if(boardCell[i].childNodes.length) {
                     boardCell[i].replaceChild(playerMarkerIcon, boardCell[i].firstChild);
