@@ -1,0 +1,72 @@
+
+:root{
+    --primary-color :#0f2859;
+    --bg-color:#a6beff;
+}
+
+@font-face {
+    font-family: "gnyrwn977";
+    src: url(font/gnyrwn977.otf);
+}
+*{
+    margin: 0;
+    font-family: "gnyrwn977";
+    color: var(--primary-color);
+    font-size: 1.2rem;
+
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: var(--bg-color);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.board-container{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+
+.cell{
+    border: 3px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.scores-container{
+    display: flex;
+    align-items: center;
+    gap: 140px;
+}
+
+.scores-container>div{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    gap: 10px;
+}
+
+.name{
+    font-weight: 700;
+    padding: 10px;
+}
+
+.turn{
+    border: solid 3px var(--primary-color);
+    border-radius: 10px;
+}
